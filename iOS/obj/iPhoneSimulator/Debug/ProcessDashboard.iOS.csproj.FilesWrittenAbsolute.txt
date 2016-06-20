@@ -1,0 +1,6 @@
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/optimized/
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/TSP.iOS.exe
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/TSP.iOS.exe.mdb
+/Users/yunlei/Desktop/processdash-mobile/iOS/bin/iPhoneSimulator/Debug/TSP.iOS.exe.mdb
+/Users/yunlei/Desktop/processdash-mobile/iOS/bin/iPhoneSimulator/Debug/TSP.iOS.exe
