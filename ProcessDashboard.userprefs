@@ -1,16 +1,16 @@
 ﻿<Properties StartupItem="iOS/ProcessDashboard.iOS.csproj">
-  <MonoDevelop.Ide.Workbench>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="ProcessDashboard" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/HomePageViewController.cs">
+    <Files>
+      <File FileName="iOS/TimelogTableSource.cs" Line="26" Column="18" />
+      <File FileName="iOS/TaskDetailViewController.cs" Line="15" Column="2" />
+      <File FileName="iOS/HomePageViewController.cs" Line="133" Column="6" />
+    </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.ProcessDashboard.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86_X86_google_apis" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ProcessDashboard.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.537D95C0-F207-4A30-824B-7AC2DA623E3D" />
 </Properties>

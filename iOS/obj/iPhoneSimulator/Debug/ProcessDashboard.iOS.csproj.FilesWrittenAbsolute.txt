@@ -4,3 +4,11 @@
 /Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/TSP.iOS.exe.mdb
 /Users/yunlei/Desktop/processdash-mobile/iOS/bin/iPhoneSimulator/Debug/TSP.iOS.exe.mdb
 /Users/yunlei/Desktop/processdash-mobile/iOS/bin/iPhoneSimulator/Debug/TSP.iOS.exe
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/optimized/star-gold45_sel.png
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/optimized/star-gold45_sel@2x.png
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/optimized/star-gold45.png
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/optimized/star-gold45@2x.png
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/optimized/star-grey45.png
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/optimized/star-grey45@2x.png
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/optimized/start.png
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/optimized/stop.png

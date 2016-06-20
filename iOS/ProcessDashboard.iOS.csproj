@@ -146,6 +146,9 @@
       <DependentUpon>TaskTimeLogViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <Import Project="..\TSP\TSP.projitems" Label="Shared" Condition="Exists('..\TSP\TSP.projitems')" />
+  <ItemGroup>
+    <BundleResource Include="start.png" />
+    <BundleResource Include="stop.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
