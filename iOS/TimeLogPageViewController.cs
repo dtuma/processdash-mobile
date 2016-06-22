@@ -10,7 +10,6 @@ namespace ProcessDashboard.iOS
     {
 
 
-
         public TimeLogPageViewController (IntPtr handle) : base (handle)
         {
         }
@@ -26,6 +25,7 @@ namespace ProcessDashboard.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+
 
 
 			TimelogsTable = new UITableView(View.Bounds, UITableViewStyle.Grouped);
@@ -55,11 +55,20 @@ namespace ProcessDashboard.iOS
 			var vege5 = new string[] { "2016-06-02", "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Team Review","3:00:02 PM", "1:00" };
 			veges.Add(new TimelogTableItem(vege5[1]) { SubHeading = vege5[0],StartTime = vege5[2], Delta = vege5[3] });
 
-			var vege6 = new string[] { "2016-06-03", "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Refine Document","11:11:02 PM", "0:21" };
+			var vege6 = new string[] { "2016-06-03", "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Refine Document","3:24:02 PM", "1:21" };
 			veges.Add(new TimelogTableItem(vege6[1]) { SubHeading = vege6[0],StartTime = vege6[2], Delta = vege6[3] });
 
+			var vege7 = new string[] { "2016-06-04", "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Refine Document", "1:30:02 PM", "0:28" };
+			veges.Add(new TimelogTableItem(vege6[1]) { SubHeading = vege7[0], StartTime = vege7[2], Delta = vege7[3] });
 
-			//}
+			var vege8 = new string[] { "2016-06-04", "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Refine Document", "11:10:02 PM", "0:31" };
+			veges.Add(new TimelogTableItem(vege6[1]) { SubHeading = vege8[0], StartTime = vege8[2], Delta = vege8[3] });
+
+			var vege9 = new string[] { "2016-06-05", "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Refine Document", "12:11:02 PM", "0:21" };
+			veges.Add(new TimelogTableItem(vege6[1]) { SubHeading = vege9[0], StartTime = vege9[2], Delta = vege9[3] });
+
+			var vege10 = new string[] { "2016-06-06", "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Refine Document", "5:11:02 PM", "0:49" };
+			veges.Add(new TimelogTableItem(vege6[1]) { SubHeading = vege10[0], StartTime = vege10[2], Delta = vege10[3] });
 
 			TimelogsTable.Source = new TimelogTableSource(veges, this);
 
@@ -82,30 +91,6 @@ namespace ProcessDashboard.iOS
 
 		}
 
-		#region View lifecycle
-
-
-		public override void ViewWillAppear(bool animated)
-		{
-			base.ViewWillAppear(animated);
-		}
-
-		public override void ViewDidAppear(bool animated)
-		{
-			base.ViewDidAppear(animated);
-		}
-
-		public override void ViewWillDisappear(bool animated)
-		{
-			base.ViewWillDisappear(animated);
-		}
-
-		public override void ViewDidDisappear(bool animated)
-		{
-			base.ViewDidDisappear(animated);
-		}
-
-		#endregion
 
 	}
 

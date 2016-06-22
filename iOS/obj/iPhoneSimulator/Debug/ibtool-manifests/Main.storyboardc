@@ -69,6 +69,21 @@
 				<integer>9</integer>
 			</dict>
 		</array>
+		<key>eVt-nD-dST</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>eVt-nD-dST</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>wlu-FC-ktr</key>
 		<array>
 			<dict>

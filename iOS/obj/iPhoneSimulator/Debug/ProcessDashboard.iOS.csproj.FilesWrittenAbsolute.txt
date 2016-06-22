@@ -30,3 +30,5 @@
 /Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/UIViewController-460.nib
 /Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/Uuq-3k-xee-view-8uc-Dl-6DG.nib
 /Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/optimized/Checkbox0.png
+/Users/yunlei/Desktop/processdash-mobile/iOS/obj/iPhoneSimulator/Debug/optimized/Checkbox1.png

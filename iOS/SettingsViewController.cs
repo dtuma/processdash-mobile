@@ -15,6 +15,8 @@ namespace ProcessDashboard.iOS
 		{
 			base.ViewDidLoad();
 
+			//view.BringSubviewToFront = this;
+
 			string[] tableItems = new string[] { "My Account",
 				"Security",
 				"Clear Cache",

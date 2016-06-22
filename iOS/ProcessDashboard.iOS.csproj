@@ -150,6 +150,8 @@
   <ItemGroup>
     <BundleResource Include="start.png" />
     <BundleResource Include="stop.png" />
+    <BundleResource Include="Checkbox0.png" />
+    <BundleResource Include="Checkbox1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

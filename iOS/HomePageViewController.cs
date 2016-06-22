@@ -7,6 +7,10 @@ namespace ProcessDashboard.iOS
 {
     public partial class HomePageViewController : UIViewController
     {
+
+		UIButton startButton, stopButton, checkButton;
+
+
 		public HomePageViewController (IntPtr handle) : base (handle)
         {
         }
@@ -14,9 +18,6 @@ namespace ProcessDashboard.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-			//ScrollView = new UIScrollView(
-			//new CGRect(0, 0, View.Frame.Width, View.Frame.Height));
-			//View.AddSubview(ScrollView);
 
 			var ProjectNameLabel = new UILabel(new CGRect(30, 80, 300, 40))
 			{
@@ -24,7 +25,7 @@ namespace ProcessDashboard.iOS
 				Font = UIFont.SystemFontOfSize(16),
 				TextColor = UIColor.Black,
 				TextAlignment = UITextAlignment.Center,
-				BackgroundColor = UIColor.LightGray,
+				BackgroundColor = UIColor.FromRGB(220, 220, 220),
 				Lines = 0,
 				LineBreakMode = UILineBreakMode.WordWrap,
 			};
@@ -47,48 +48,49 @@ namespace ProcessDashboard.iOS
 				Font = UIFont.SystemFontOfSize(13),
 				TextColor = UIColor.Black,
 				TextAlignment = UITextAlignment.Center,
-				BackgroundColor = UIColor.LightGray,
+				BackgroundColor = UIColor.FromRGB(220, 220, 220),
 				Lines = 0,
 				LineBreakMode = UILineBreakMode.WordWrap,
 			};
 
-			UIButton startButton, stopButton;
-			UISwitch switchEnabled;
-
 			startButton = UIButton.FromType(UIButtonType.RoundedRect);
 			startButton.SetImage(UIImage.FromFile("start.png"), UIControlState.Normal);
-			startButton.Frame = new CGRect(100, 240, 45, 42);
+			startButton.SetImage(UIImage.FromFile("start.png"), UIControlState.Disabled);
+			//startButton.TintColor = UIColor.Black;
+			startButton.Frame = new CGRect(100, 240, 40, 40);
 			startButton.TouchUpInside += (sender, e) =>
 			{
-				new UIAlertView("Notice"
-					, "Start logging time!"
-					, null
-					, "OK"
-					, null).Show();
+				startButton.Enabled = false;
+				stopButton.Enabled = true;
+
 			};
-			stopButton = UIButton.FromType(UIButtonType.Custom);
+			stopButton = UIButton.FromType(UIButtonType.RoundedRect);
 			stopButton.SetImage(UIImage.FromFile("stop.png"), UIControlState.Normal);
-			stopButton.Frame = new CGRect(170, 240, 45, 42);
+			//stopButton.SetImage(UIImage.FromFile("stop.png"), UIControlState.Disabled);
+			//stopButton.TintColor = UIColor.Black;
+			stopButton.Frame = new CGRect(170, 240, 40, 40);
 			stopButton.TouchUpInside += (sender, e) =>
 			{
-				new UIAlertView("Notice"
-					, "Stop logging time!"
-					, null
-					, "OK"
-					, null).Show();
+				stopButton.Enabled = false;
+				startButton.Enabled = true;
+
 			};
 
-
-			switchEnabled = new UISwitch(new CGRect(240, 245, 50, 30));
-			switchEnabled.ValueChanged += (sender, e) =>
+			checkButton = UIButton.FromType(UIButtonType.Custom);
+			checkButton.SetImage(UIImage.FromFile("Checkbox0.png"), UIControlState.Normal);
+			checkButton.SetImage(UIImage.FromFile("Checkbox1.png"), UIControlState.Selected);
+			//checkButton.TintColor = UIColor.Black;
+			checkButton.Frame = new CGRect(240, 243, 32, 32);
+			checkButton.TouchUpInside += (sender, e) =>
 			{
-				new UIAlertView("Notice"
-					, "This task marks as completed!"
-					, null
-					, "OK"
-					, null).Show();
+				checkButton.Selected = !checkButton.Selected;
+
+				//new UIAlertView("Notice"
+				//	, "This task marks as completed!"
+				//	, null
+				//	, "OK"
+				//	, null).Show();
 			};
-			switchEnabled.On = true;
 
 
 			string[] tableItems = new string[] { "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Draft",
@@ -108,7 +110,7 @@ namespace ProcessDashboard.iOS
 		
 			View.AddSubview(startButton);
 			View.AddSubview(stopButton);
-			View.AddSubview(switchEnabled);
+			View.AddSubview(checkButton);
 			View.Add(ProjectNameLabel);
 			this.Add(CurrentTaskLabel);
 			this.Add(CurrentTaskNameLabel);
@@ -129,6 +131,7 @@ namespace ProcessDashboard.iOS
 			}
 
 		}
+
 
     }
 }

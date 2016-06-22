@@ -35,7 +35,7 @@ namespace ProcessDashboard.iOS
 				Font = UIFont.SystemFontOfSize(13),
 				TextColor = UIColor.Black,
 				TextAlignment = UITextAlignment.Center,
-				BackgroundColor = UIColor.LightGray,
+				BackgroundColor = UIColor.FromRGB(220, 220, 220),
 			};
 
 			var StartTimeText = new UITextField(new CGRect(30, 220, 300, 20))
@@ -55,11 +55,11 @@ namespace ProcessDashboard.iOS
 				Font = UIFont.SystemFontOfSize(13),
 				TextColor = UIColor.Black,
 				TextAlignment = UITextAlignment.Center,
-				BackgroundColor = UIColor.LightGray,
+				BackgroundColor = UIColor.FromRGB(220, 220, 220),
 
 			};
 
-			var DeltaText = new UITextField(new CGRect(30, 280, 300, 20))
+			var DeltaText = new UITextField(new CGRect(30, 290, 300, 20))
 			{
 				Text = "1:20",
 				Font = UIFont.SystemFontOfSize(12),
@@ -78,8 +78,7 @@ namespace ProcessDashboard.iOS
 				Font = UIFont.SystemFontOfSize(13),
 				TextColor = UIColor.Black,
 				TextAlignment = UITextAlignment.Center,
-				BackgroundColor = UIColor.LightGray,
-
+				BackgroundColor = UIColor.FromRGB(220, 220, 220),
 			};
 
 
@@ -94,24 +93,25 @@ namespace ProcessDashboard.iOS
 			};
 
 			//
-			var CommentLabel = new UILabel(new CGRect(30, 400, 300, 20))
+			var CommentLabel = new UILabel(new CGRect(30, 390, 300, 20))
 			{
 				Text = "Comment",
 				Font = UIFont.SystemFontOfSize(13),
 				TextColor = UIColor.Black,
 				TextAlignment = UITextAlignment.Center,
-				BackgroundColor = UIColor.LightGray,
+				BackgroundColor = UIColor.FromRGB(220,220,220),
 
 			};
 
-			var CommentText = new UITextField(new CGRect(30, 450, 300, 30))
+			var CommentText = new UITextView(new CGRect(30, 420, 300, 100))
 			{
-				Text = "",
-				Font = UIFont.SystemFontOfSize(16),
+				Text = "The comment just for testing.The comment just for testing.The comment just for testing.The comment just for testing.",
+				Font = UIFont.SystemFontOfSize(12),
 				TextColor = UIColor.LightGray,
-				TextAlignment = UITextAlignment.Center,
+				TextAlignment = UITextAlignment.Left,
+				Editable = true,
 				//BackgroundColor = UIColor.LightGray,
-			
+	
 			};
 
 			this.Add(TaskNameLabel);
