@@ -23,21 +23,6 @@
 				<integer>9</integer>
 			</dict>
 		</array>
-		<key>2hA-Pe-CXh</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>2hA-Pe-CXh</string>
-				</array>
-				<key>message</key>
-				<string>Prototype table cells must have reuse identifiers</string>
-				<key>type</key>
-				<string>IBUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
 		<key>482</key>
 		<array>
 			<dict>
@@ -63,6 +48,21 @@
 				</array>
 				<key>message</key>
 				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>NY4-oR-rS2</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>NY4-oR-rS2</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
 				<key>type</key>
 				<string>IBUnsupportedConfiguration</string>
 				<key>type-value</key>

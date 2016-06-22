@@ -40,27 +40,23 @@ namespace ProcessDashboard.iOS
 		{
 			List<TimelogTableItem> veges = new List<TimelogTableItem>();
 
-			//var lines = File.ReadLines("VegeData2");
-			//foreach (var line in lines)
-			//{
-				//var vege = line.Split(',');
-		    var vege1 = new string[] { "2016-06-01",".../View Logic/UI experiment/Personal Review"};
-			veges.Add(new TimelogTableItem(vege1[1]) { SubHeading = vege1[0] });
+		    var vege1 = new string[] { "2016-06-01","/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Personal Review","11:00:02 AM", "3:01"};
+			veges.Add(new TimelogTableItem(vege1[1]) { SubHeading = vege1[0], StartTime = vege1[2], Delta = vege1[3]});
 
-			var vege2 = new string[] { "2016-06-01", ".../View Logic/UI experiment/Team Review" };
-			veges.Add(new TimelogTableItem(vege2[1]) { SubHeading = vege2[0] });
+			var vege2 = new string[] { "2016-06-01", "/ Project / Mobile App I1 / High Level Design Document / View Logic/ UI experiment / Team Review","3:00:02 PM", "1:20" };
+			veges.Add(new TimelogTableItem(vege2[1]) { SubHeading = vege2[0], StartTime = vege2[2], Delta = vege2[3] });
 
-			var vege3 = new string[] { "2016-06-01", ".../View Logic/UI experiment/Refine Document" };
-			veges.Add(new TimelogTableItem(vege3[1]) { SubHeading = vege3[0] });
+			var vege3 = new string[] { "2016-06-01", "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Refine Document","7:00:02 PM", "2:31" };
+			veges.Add(new TimelogTableItem(vege3[1]) { SubHeading = vege3[0],StartTime = vege3[2], Delta = vege3[3] });
 
-			var vege4 = new string[] { "2016-06-02", ".../View Logic/UI experiment/Personal Review" };
-			veges.Add(new TimelogTableItem(vege4[1]) { SubHeading = vege4[0] });
+			var vege4 = new string[] { "2016-06-02", " / Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Personal Review","11:20:02 AM", "2:32" };
+			veges.Add(new TimelogTableItem(vege4[1]) { SubHeading = vege4[0],StartTime = vege4[2], Delta = vege4[3] });
 
-			var vege5 = new string[] { "2016-06-02", ".../View Logic/UI experiment/Team Review" };
-			veges.Add(new TimelogTableItem(vege5[1]) { SubHeading = vege5[0] });
+			var vege5 = new string[] { "2016-06-02", "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Team Review","3:00:02 PM", "1:00" };
+			veges.Add(new TimelogTableItem(vege5[1]) { SubHeading = vege5[0],StartTime = vege5[2], Delta = vege5[3] });
 
-			var vege6 = new string[] { "2016-06-03", ".../View Logic/UI experiment/Refine Document" };
-			veges.Add(new TimelogTableItem(vege6[1]) { SubHeading = vege6[0] });
+			var vege6 = new string[] { "2016-06-03", "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Refine Document","11:11:02 PM", "0:21" };
+			veges.Add(new TimelogTableItem(vege6[1]) { SubHeading = vege6[0],StartTime = vege6[2], Delta = vege6[3] });
 
 
 			//}

@@ -1,9 +1,21 @@
 ﻿<Properties StartupItem="iOS/ProcessDashboard.iOS.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/HomePageViewController.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="iOS/TimelogTableSource.cs" Line="26" Column="18" />
+      <File FileName="iOS/TimelogTableSource.cs" Line="29" Column="6" />
       <File FileName="iOS/TaskDetailViewController.cs" Line="15" Column="2" />
-      <File FileName="iOS/HomePageViewController.cs" Line="133" Column="6" />
+      <File FileName="iOS/HomePageViewController.cs" Line="6" Column="27" />
+      <File FileName="iOS/LoginPageViewController.cs" Line="25" Column="6" />
+      <File FileName="iOS/LoginPageViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="iOS/HomePageViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="iOS/TaskTableSource.cs" Line="50" Column="4" />
+      <File FileName="iOS/TimelogDetailViewController.cs" Line="29" Column="6" />
+      <File FileName="iOS/TimelogDetailViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="iOS/TimeLogPageViewController.cs" Line="57" Column="4" />
+      <File FileName="iOS/CustomTimeLogCell.cs" Line="66" Column="41" />
+      <File FileName="iOS/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="iOS/TimelogTableItem.cs" Line="34" Column="3" />
+      <File FileName="iOS/TimelogTableItemGroup.cs" Line="9" Column="21" />
+      <File FileName="iOS/TaskTimeLogViewController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

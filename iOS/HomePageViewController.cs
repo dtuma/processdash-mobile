@@ -14,8 +14,11 @@ namespace ProcessDashboard.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+			//ScrollView = new UIScrollView(
+			//new CGRect(0, 0, View.Frame.Width, View.Frame.Height));
+			//View.AddSubview(ScrollView);
 
-			var ProjectNameLabel = new UILabel(new CGRect(30, 100, 300, 40))
+			var ProjectNameLabel = new UILabel(new CGRect(30, 80, 300, 40))
 			{
 				Text = "/Project/Mobile App I1",
 				Font = UIFont.SystemFontOfSize(16),
@@ -27,7 +30,7 @@ namespace ProcessDashboard.iOS
 			};
 
 			// 
-			var CurrentTaskLabel = new UILabel(new CGRect(30, 160, 100, 20))
+			var CurrentTaskLabel = new UILabel(new CGRect(30, 130, 100, 20))
 			{
 				Text = "Current Task:",
 				Font = UIFont.SystemFontOfSize(12),
@@ -38,7 +41,7 @@ namespace ProcessDashboard.iOS
 
 
 
-			var CurrentTaskNameLabel = new UILabel(new CGRect(30, 190, 300, 60))
+			var CurrentTaskNameLabel = new UILabel(new CGRect(30, 170, 300, 60))
 			{
 				Text = "/Project/Mobile App I1/High Level Design Document/View Logic/UI experiment/Team Walkthrough",
 				Font = UIFont.SystemFontOfSize(13),
@@ -54,7 +57,7 @@ namespace ProcessDashboard.iOS
 
 			startButton = UIButton.FromType(UIButtonType.RoundedRect);
 			startButton.SetImage(UIImage.FromFile("start.png"), UIControlState.Normal);
-			startButton.Frame = new CGRect(100, 255, 45, 42);
+			startButton.Frame = new CGRect(100, 240, 45, 42);
 			startButton.TouchUpInside += (sender, e) =>
 			{
 				new UIAlertView("Notice"
@@ -65,7 +68,7 @@ namespace ProcessDashboard.iOS
 			};
 			stopButton = UIButton.FromType(UIButtonType.Custom);
 			stopButton.SetImage(UIImage.FromFile("stop.png"), UIControlState.Normal);
-			stopButton.Frame = new CGRect(170, 255, 45, 42);
+			stopButton.Frame = new CGRect(170, 240, 45, 42);
 			stopButton.TouchUpInside += (sender, e) =>
 			{
 				new UIAlertView("Notice"
@@ -76,7 +79,7 @@ namespace ProcessDashboard.iOS
 			};
 
 
-			switchEnabled = new UISwitch(new CGRect(240, 260, 50, 30));
+			switchEnabled = new UISwitch(new CGRect(240, 245, 50, 30));
 			switchEnabled.ValueChanged += (sender, e) =>
 			{
 				new UIAlertView("Notice"
@@ -88,28 +91,25 @@ namespace ProcessDashboard.iOS
 			switchEnabled.On = true;
 
 
-			string[] tableItems = new string[] { "/Project/Mobile App I1/High Level Design Document/View Logic/UI experiment/Draft",
-				"/Project/Mobile App I1/High Level Design Document/View Logic/UI experiment/Personal Review",
-				"/Project/Mobile App I1/High Level Design Document/View Logic/UI experiment/Team Walkthrough",
-				"/Project/Mobile App I1/High Level Design Document/View Logic/UI experiment/Refine",
-				"/Project/Mobile App I1/High Level Design Document/View Logic/Task2/Publish", 
-				"/Project/Mobile App I1/High Level Design Document/View Logic/Task3/Refine", 
-				"/Project/Mobile App I1/High Level Design Document/View Logic/Task4/Draft", 
-				"/Project/Mobile App I1/High Level Design Document/View Logic/Task3/Publish",
-				"/Project/Mobile App I1/High Level Design Document/View Logic/Task3/Publish",
-				"/Project/Mobile App I1/High Level Design Document/View Logic/Task3/Publish",
-				"/Project/Mobile App I1/High Level Design Document/View Logic/Task3/Publish"};
+			string[] tableItems = new string[] { "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Draft",
+				"/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Draft",
+				"/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Team Walkthrough",
+				"/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / UI experiment/Refine",
+				"/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Task2 / Publish", 
+				"/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Refine", 
+				"/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Draft", 
+				"/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Publish"};
 
-			RecentTaskTable = new UITableView(new CGRect(25, 300, View.Bounds.Width - 50, View.Bounds.Height - 300 ));
+			RecentTaskTable = new UITableView(new CGRect(25, 290, View.Bounds.Width - 50, View.Bounds.Height - 300 ));
 			RecentTaskTable.Source = new TaskTableSource(tableItems,this);
 
-			Add(RecentTaskTable);
+			View.Add(RecentTaskTable);
 
 		
 			View.AddSubview(startButton);
 			View.AddSubview(stopButton);
 			View.AddSubview(switchEnabled);
-			this.Add(ProjectNameLabel);
+			View.Add(ProjectNameLabel);
 			this.Add(CurrentTaskLabel);
 			this.Add(CurrentTaskNameLabel);
 

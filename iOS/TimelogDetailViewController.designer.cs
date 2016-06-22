@@ -14,8 +14,16 @@ namespace ProcessDashboard.iOS
     [Register ("TimelogDetailViewController")]
     partial class TimelogDetailViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIScrollView scrollView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (scrollView != null) {
+                scrollView.Dispose ();
+                scrollView = null;
+            }
         }
     }
 }

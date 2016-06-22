@@ -18,11 +18,20 @@ namespace ProcessDashboard.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView RecentTaskTable { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIScrollView ScrollView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (RecentTaskTable != null) {
                 RecentTaskTable.Dispose ();
                 RecentTaskTable = null;
+            }
+
+            if (ScrollView != null) {
+                ScrollView.Dispose ();
+                ScrollView = null;
             }
         }
     }

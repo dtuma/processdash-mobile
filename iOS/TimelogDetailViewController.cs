@@ -2,6 +2,7 @@ using Foundation;
 using System;
 using UIKit;
 using CoreGraphics;
+using System.Drawing;
 
 namespace ProcessDashboard.iOS
 {
@@ -14,6 +15,7 @@ namespace ProcessDashboard.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+
 
 			var TaskNameLabel = new UILabel(new CGRect(30, 100, 300, 60))
 			{
@@ -94,7 +96,7 @@ namespace ProcessDashboard.iOS
 			//
 			var CommentLabel = new UILabel(new CGRect(30, 400, 300, 20))
 			{
-				Text = "Delta",
+				Text = "Comment",
 				Font = UIFont.SystemFontOfSize(13),
 				TextColor = UIColor.Black,
 				TextAlignment = UITextAlignment.Center,
@@ -102,16 +104,15 @@ namespace ProcessDashboard.iOS
 
 			};
 
-			var CommentText = new UITextField(new CGRect(30, 450, 300, 20))
+			var CommentText = new UITextField(new CGRect(30, 450, 300, 30))
 			{
-				Text = " ",
-				Font = UIFont.SystemFontOfSize(12),
+				Text = "",
+				Font = UIFont.SystemFontOfSize(16),
 				TextColor = UIColor.LightGray,
 				TextAlignment = UITextAlignment.Center,
 				//BackgroundColor = UIColor.LightGray,
-
+			
 			};
-
 
 			this.Add(TaskNameLabel);
 			this.Add(StartTimeLabel);

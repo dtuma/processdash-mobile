@@ -9,7 +9,9 @@ namespace ProcessDashboard.iOS
 
 		public string SubHeading { get; set; }
 
-		public string ImageName { get; set; }
+		public string StartTime { get; set; }
+
+		public string Delta { get; set; }
 
 		public UITableViewCellStyle CellStyle
 		{
