@@ -17,22 +17,22 @@ namespace ProcessDashboard.iOS
 
 			var ProjectNameLabel = new UILabel(new CGRect(30, 100, 300, 40))
 			{
-				Text = "/Project/Mobile App I1",
+				Text = "/ Project / Mobile App I1",
 				Font = UIFont.SystemFontOfSize(16),
 				TextColor = UIColor.Black,
 				TextAlignment = UITextAlignment.Center,
-				BackgroundColor = UIColor.LightGray,
+				BackgroundColor = UIColor.FromRGB(220, 220, 220),
 				Lines = 0,
 				LineBreakMode = UILineBreakMode.WordWrap,
 			};
 
 			var TaskNameLabel = new UILabel(new CGRect(30, 180, 300, 60))
 			{
-				Text = "/Project/Mobile App I1/High Level Design Document/View Logic/UI experiment/Team Walkthrough",
+				Text = "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Team Walkthrough",
 				Font = UIFont.SystemFontOfSize(13),
 				TextColor = UIColor.Black,
 				TextAlignment = UITextAlignment.Center,
-				BackgroundColor = UIColor.LightGray,
+				BackgroundColor = UIColor.FromRGB(220, 220, 220),
 				Lines = 0,
 				LineBreakMode = UILineBreakMode.WordWrap,
 			};

@@ -21,7 +21,7 @@ namespace ProcessDashboard.iOS
 
 			var ProjectNameLabel = new UILabel(new CGRect(30, 80, 300, 40))
 			{
-				Text = "/Project/Mobile App I1",
+				Text = "/ Project / Mobile App I1",
 				Font = UIFont.SystemFontOfSize(16),
 				TextColor = UIColor.Black,
 				TextAlignment = UITextAlignment.Center,
@@ -44,7 +44,7 @@ namespace ProcessDashboard.iOS
 
 			var CurrentTaskNameLabel = new UILabel(new CGRect(30, 170, 300, 60))
 			{
-				Text = "/Project/Mobile App I1/High Level Design Document/View Logic/UI experiment/Team Walkthrough",
+				Text = "/ Project / Mobile App I1 / High Level Design Document / View Logic / UI experiment / Team Walkthrough",
 				Font = UIFont.SystemFontOfSize(13),
 				TextColor = UIColor.Black,
 				TextAlignment = UITextAlignment.Center,
