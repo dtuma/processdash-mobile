@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -110,7 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="ProjectsStoryboard.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -137,6 +136,43 @@
     <Compile Include="TaskDetailsViewController.designer.cs">
       <DependentUpon>TaskDetailsViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomTimeLogCell.cs" />
+    <Compile Include="HomePageViewController.cs" />
+    <Compile Include="HomePageViewController.designer.cs">
+        <DependentUpon>HomePageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPageViewController.cs" />
+    <Compile Include="LoginPageViewController.designer.cs">
+        <DependentUpon>LoginPageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectsTabNavigationController.cs" />
+    <Compile Include="SettingsViewController.cs" />
+    <Compile Include="SettingsViewController.designer.cs">
+        <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TasksViewController.cs" />
+    <Compile Include="TaskTableSource.cs" />
+    <Compile Include="TaskTimeLogViewController.cs" />
+    <Compile Include="TaskTimeLogViewController.designer.cs">
+        <DependentUpon>TaskTimeLogViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimelogDetailViewController.cs" />
+    <Compile Include="TimelogDetailViewController.designer.cs">
+        <DependentUpon>TimelogDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeLogPageViewController.cs" />
+    <Compile Include="TimeLogPageViewController.designer.cs">
+        <DependentUpon>TimeLogPageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimelogTableItem.cs" />
+    <Compile Include="TimelogTableItemGroup.cs" />
+    <Compile Include="TimelogTableSource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Checkbox0.png" />
+    <BundleResource Include="Checkbox1.png" />
+    <BundleResource Include="start.png" />
+    <BundleResource Include="stop.png" />
   </ItemGroup>
   <Import Project="..\ProcessDashboard\ProcessDashboard.projitems" Label="Shared" Condition="Exists('..\ProcessDashboard\ProcessDashboard.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
