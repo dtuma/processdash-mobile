@@ -1,4 +1,5 @@
-
+﻿
+using System;
 using Android.App;
 using Android.OS;
 using Android.Views;
@@ -6,7 +7,7 @@ using Android.Widget;
 
 namespace ProcessDashboard.Droid.Fragments
 {
-    public class ListOfTasks : ListFragment
+    public class ProjectDetails : Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -17,10 +18,18 @@ namespace ProcessDashboard.Droid.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
+			View view = inflater.Inflate(Resource.Layout.Home, container, false);
+			ListView listView = view.FindViewById<ListView>(Resource.Id.tasksListView);
+			loadDummyData(listView);
+			return view;
 
-            return base.OnCreateView(inflater, container, savedInstanceState);
+		}
+
+		private void loadDummyData(ListView listView)
+		{
+			string[] items = new string[] { "Sample Task", "Component 1 / Component 2 / Code", "... / head truncation" };
+			ArrayAdapter ListAdapter = new ArrayAdapter<String>(this.Activity, Android.Resource.Layout.SimpleListItem1, items);
+			listView.Adapter = ListAdapter;
         }
 
         public override void OnActivityCreated(Bundle savedInstanceState)
