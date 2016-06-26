@@ -42,6 +42,6 @@
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcons.appiconset</string>
 	<key>UIMainStoryboardFile</key>
-	<string>ProjectsStoryboard</string>
+	<string>Main</string>
 </dict>
 </plist>
