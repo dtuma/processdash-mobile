@@ -19,7 +19,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Shone Jin (KQDVLM9N7X)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchFastDev>true</MtouchFastDev>
     <MtouchUseSGen>true</MtouchUseSGen>
@@ -71,7 +71,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Shone Jin (KQDVLM9N7X)</CodesignKey>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchFastDev>true</MtouchFastDev>
@@ -84,6 +84,7 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>5b938e87-821e-43cd-b130-d847d0c1b46d</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -94,13 +95,22 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\HomeTabIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ProjectsTabIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ProjectsTabIcon.imageset\Projects_75.png" />
+    <ImageAsset Include="Assets.xcassets\HomeTabIcon.imageset\House-04.png" />
+    <ImageAsset Include="Assets.xcassets\HomeTabIcon.imageset\Home_50.png" />
+    <ImageAsset Include="Assets.xcassets\ProjectsTabIcon.imageset\Check List-75.png" />
+    <ImageAsset Include="Assets.xcassets\ProjectsTabIcon.imageset\Check List-50.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\HomeTabIcon.imageset\" />
+    <Folder Include="Assets.xcassets\ProjectsTabIcon.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="ProjectsStoryboard.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -109,9 +119,23 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="RootTabBarController.cs" />
+    <Compile Include="RootTabBarController.designer.cs">
+      <DependentUpon>RootTabBarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectsTableViewController.cs" />
+    <Compile Include="ProjectsTableViewController.designer.cs">
+      <DependentUpon>ProjectsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectsTableSource.cs" />
+    <Compile Include="TasksTableViewController.cs" />
+    <Compile Include="TasksTableViewController.designer.cs">
+      <DependentUpon>TasksTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TasksTableSource.cs" />
+    <Compile Include="TaskDetailsViewController.cs" />
+    <Compile Include="TaskDetailsViewController.designer.cs">
+      <DependentUpon>TaskDetailsViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="..\ProcessDashboard\ProcessDashboard.projitems" Label="Shared" Condition="Exists('..\ProcessDashboard\ProcessDashboard.projitems')" />

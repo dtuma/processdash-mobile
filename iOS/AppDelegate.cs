@@ -21,6 +21,15 @@ namespace ProcessDashboard.iOS
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
 
+			/*
+			// create a new window instance based on the screen size
+			Window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+			var rootTabController = new RootTabViewController();
+			Window.RootViewController = rootTabController;
+			Window.MakeKeyAndVisible();
+			*/
+
 			return true;
 		}
 
