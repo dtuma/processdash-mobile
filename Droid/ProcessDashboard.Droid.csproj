@@ -64,13 +64,13 @@
     <Compile Include="Fragments\Home.cs" />
     <Compile Include="Fragments\ListOfProjects.cs" />
     <Compile Include="Fragments\Login.cs" />
-    <Compile Include="Fragments\ProjectDetails.cs" />
     <Compile Include="Fragments\Settings.cs" />
     <Compile Include="Fragments\TaskDetails.cs" />
     <Compile Include="Fragments\TaskTimeLogDetail.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Fragments\ListProjectTasks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -101,9 +101,7 @@
     <AndroidResource Include="Resources\layout\ListOfProjects.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\ProjectDetails.axml">
-      <SubType>AndroidResource</SubType>
-    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListProjectTasks.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
