@@ -1,0 +1,4 @@
+ProcessDashboard.Droid.MainActivity, ProcessDashboard.Droid;md5cdc79c8ff75745a4b34502f7f8d45e2e.MainActivity
+ProcessDashboard.Droid.MainActivity, ProcessDashboard.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cdc79c8ff75745a4b34502f7f8d45e2e.MainActivity
+ProcessDashboard.Droid.MainActivity;md5cdc79c8ff75745a4b34502f7f8d45e2e.MainActivity
+processdashboard.droid.MainActivity;md5cdc79c8ff75745a4b34502f7f8d45e2e.MainActivity
