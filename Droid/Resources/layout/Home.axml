@@ -17,26 +17,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView1" />
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:id="@+id/space1" />
         <Button
             android:src="@drawable/Pause"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:id="@+id/playHome"
-            android:background="@drawable/pause" />
+            android:background="@drawable/pause"
+            android:paddingLeft="5dp" />
         <Button
             android:src="@drawable/Play"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:background="@drawable/play"
-            android:id="@+id/pauseHome" />
+            android:id="@+id/pauseHome"
+            android:paddingLeft="5dp" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/taskComplete_Home"
+            android:paddingLeft="5dp" />
     </LinearLayout>
     <TextView
         android:text="Recent task.."
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/textView2" />
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:id="@+id/recentTask_Home"
+        android:gravity="center_horizontal"
+        android:elegantTextHeight="true"
+        android:ellipsize="start" />
     <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recentTaskList_Home" />
 </LinearLayout>

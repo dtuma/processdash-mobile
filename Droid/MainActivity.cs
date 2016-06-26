@@ -1,28 +1,39 @@
-﻿using Android.App;
-using Android.Widget;
+﻿using Android.Widget;
 using Android.OS;
+using Android.Views;
+
+using System.Collections.Generic;
+
+using SupportFragment = Android.App.Fragment;
+
+using SupportToolbar = Android.Support.V7.Widget.Toolbar;
+using ProcessDashboard.Droid.Fragments;
 
 namespace ProcessDashboard.Droid
 {
-	[Activity(Label = "Process Dashboard", MainLauncher = true, Icon = "@mipmap/icon")]
-	public class MainActivity : Activity
-	{
-		int count = 1;
+    [Android.App.Activity(Label = "Process Dashboard", MainLauncher = true, Icon = "@mipmap/icon")]
+    public class MainActivity : Android.Support.V7.App.AppCompatActivity
+    {
+    
 
-		protected override void OnCreate(Bundle savedInstanceState)
-		{
-			base.OnCreate(savedInstanceState);
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+            // Set our view from the "main" layout resource
+            SetContentView(Resource.Layout.Main);
+            
 
-			// Set our view from the "main" layout resource
-			SetContentView(Resource.Layout.Login);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button>(Resource.Id.myButton);
+        }
 
-			button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
-		}
-	}
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.action_menu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+
+    }
 }
 
 
