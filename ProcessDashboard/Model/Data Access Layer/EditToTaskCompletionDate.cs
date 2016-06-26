@@ -6,8 +6,8 @@ namespace ProcessDashboard.Model.Data_Access_Layer
 {
     class EditToTaskCompletionDate
     {
-        String taskID;
-        long newCompletionDate;
-        DateTime editTimestamp;
+        String taskID { get; set; }
+        DateTime newCompletionDate { get; set; }
+        DateTime editTimestamp { get; set; }
     }
 }

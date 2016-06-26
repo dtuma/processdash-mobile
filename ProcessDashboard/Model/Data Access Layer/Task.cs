@@ -8,7 +8,7 @@ namespace ProcessDashboard.Model.Data_Access_Layer
     {
         String taskID { get; }
         String taskName { get; }
-        String projectID { get; }
+        Project project { get; }
         DateTime completionDate { get; set; }
         long estimatedTime { get; set; }
         long actualTime { get; set; }
