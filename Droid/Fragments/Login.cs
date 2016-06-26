@@ -20,8 +20,6 @@ namespace ProcessDashboard.Droid.Fragments
         {
             // Use this to return your custom view for this Fragment
             View lf =  inflater.Inflate(Resource.Layout.Login, container, false);
-
-
             Button login = lf.FindViewById<Button>(Resource.Id.signin_button);
             login.Click += Login_Click;
             return lf;
@@ -33,7 +31,7 @@ namespace ProcessDashboard.Droid.Fragments
             // Login logic
 
             // Switch to next screen
-      //      ((MainActivity)(this.Activity)).switchToFragment(MainActivity.fragmentTypes.home);
+            ((MainActivity)(this.Activity)).switchToFragment(MainActivity.fragmentTypes.home);
         }
     }
 }

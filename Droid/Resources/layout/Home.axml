@@ -27,19 +27,22 @@
             android:layout_height="24dp"
             android:id="@+id/playHome"
             android:background="@drawable/pause"
-            android:paddingLeft="5dp" />
+            android:paddingLeft="5dp"
+            android:layout_margin="5dp" />
         <Button
             android:src="@drawable/Play"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:background="@drawable/play"
             android:id="@+id/pauseHome"
-            android:paddingLeft="5dp" />
+            android:paddingLeft="5dp"
+            android:layout_margin="5dp" />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/taskComplete_Home"
-            android:paddingLeft="5dp" />
+            android:paddingLeft="5dp"
+            android:layout_margin="5dp" />
     </LinearLayout>
     <TextView
         android:text="Recent task.."

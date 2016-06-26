@@ -5,13 +5,13 @@ using Android.Views;
 
 namespace ProcessDashboard.Droid.Fragments
 {
-    public class Settings : Fragment
+    // Use Preference Fragment
+    public class Settings : Android.Preferences.PreferenceFragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
+            AddPreferencesFromResource(Resource.Layout.Settings);
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)

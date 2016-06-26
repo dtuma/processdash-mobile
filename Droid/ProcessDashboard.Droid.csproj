@@ -64,7 +64,7 @@
     <Compile Include="Fragments\Home.cs" />
     <Compile Include="Fragments\ListOfProjects.cs" />
     <Compile Include="Fragments\Login.cs" />
-    <Compile Include="Fragments\ProjectDetails.cs" />
+    <Compile Include="Fragments\ListOfTasks.cs" />
     <Compile Include="Fragments\Settings.cs" />
     <Compile Include="Fragments\TaskDetails.cs" />
     <Compile Include="Fragments\TaskTimeLogDetail.cs" />
@@ -101,7 +101,7 @@
     <AndroidResource Include="Resources\layout\ListOfProjects.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\ProjectDetails.axml">
+    <AndroidResource Include="Resources\layout\ListOfTasks.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
