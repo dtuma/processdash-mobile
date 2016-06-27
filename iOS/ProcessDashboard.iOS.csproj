@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -7,7 +6,7 @@
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>ProcessDashboard.iOS</RootNamespace>
-    <AssemblyName>ProcessDashboardiOS</AssemblyName>
+    <AssemblyName>ProcessDashboard.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
@@ -19,7 +18,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: leiyunlei@gmail.com (799K2U3KN3)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchFastDev>true</MtouchFastDev>
     <MtouchUseSGen>true</MtouchUseSGen>
@@ -71,7 +70,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Shone Jin (KQDVLM9N7X)</CodesignKey>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchFastDev>true</MtouchFastDev>
@@ -84,6 +83,7 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>5b938e87-821e-43cd-b130-d847d0c1b46d</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -92,15 +92,20 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\HomeTabIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ProjectsTabIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ProjectsTabIcon.imageset\Projects_75.png" />
+    <ImageAsset Include="Assets.xcassets\HomeTabIcon.imageset\House-04.png" />
+    <ImageAsset Include="Assets.xcassets\HomeTabIcon.imageset\Home_50.png" />
+    <ImageAsset Include="Assets.xcassets\ProjectsTabIcon.imageset\Check List-75.png" />
+    <ImageAsset Include="Assets.xcassets\ProjectsTabIcon.imageset\Check List-50.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\HomeTabIcon.imageset\" />
+    <Folder Include="Assets.xcassets\ProjectsTabIcon.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -113,11 +118,63 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="RootTabBarController.cs" />
+    <Compile Include="RootTabBarController.designer.cs">
+      <DependentUpon>RootTabBarController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProjectsTableViewController.cs" />
+    <Compile Include="ProjectsTableViewController.designer.cs">
+      <DependentUpon>ProjectsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectsTableSource.cs" />
+    <Compile Include="TasksTableViewController.cs" />
+    <Compile Include="TasksTableViewController.designer.cs">
+      <DependentUpon>TasksTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TasksTableSource.cs" />
+    <Compile Include="TaskDetailsViewController.cs" />
+    <Compile Include="TaskDetailsViewController.designer.cs">
+      <DependentUpon>TaskDetailsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomTimeLogCell.cs" />
+    <Compile Include="HomePageViewController.cs" />
+    <Compile Include="HomePageViewController.designer.cs">
+        <DependentUpon>HomePageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPageViewController.cs" />
+    <Compile Include="LoginPageViewController.designer.cs">
+        <DependentUpon>LoginPageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectsTabNavigationController.cs" />
+    <Compile Include="SettingsViewController.cs" />
+    <Compile Include="SettingsViewController.designer.cs">
+        <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TasksViewController.cs" />
+    <Compile Include="TaskTableSource.cs" />
+    <Compile Include="TaskTimeLogViewController.cs" />
+    <Compile Include="TaskTimeLogViewController.designer.cs">
+        <DependentUpon>TaskTimeLogViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimelogDetailViewController.cs" />
+    <Compile Include="TimelogDetailViewController.designer.cs">
+        <DependentUpon>TimelogDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeLogPageViewController.cs" />
+    <Compile Include="TimeLogPageViewController.designer.cs">
+        <DependentUpon>TimeLogPageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimelogTableItem.cs" />
+    <Compile Include="TimelogTableItemGroup.cs" />
+    <Compile Include="TimelogTableSource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Checkbox0.png" />
+    <BundleResource Include="Checkbox1.png" />
+    <BundleResource Include="start.png" />
+    <BundleResource Include="stop.png" />
   </ItemGroup>
   <Import Project="..\ProcessDashboard\ProcessDashboard.projitems" Label="Shared" Condition="Exists('..\ProcessDashboard\ProcessDashboard.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+
 </Project>
