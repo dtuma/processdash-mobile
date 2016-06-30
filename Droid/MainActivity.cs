@@ -1,12 +1,15 @@
 ﻿using Android.OS;
 using Android.Views;
 using ProcessDashboard.Droid.Fragments;
-using Android.App;
+using Android.Runtime;
+using Android.Support.Design.Widget;
+using Java.Lang;
+using Android.Support.V4.App;
 
 namespace ProcessDashboard.Droid
 {
     [Android.App.Activity(Label = "Process Dashboard", MainLauncher = true, Icon = "@mipmap/icon")]
-    public class MainActivity : Android.Support.V7.App.AppCompatActivity
+    public class MainActivity : FragmentActivity
     {
 
         public enum fragmentTypes { login, home, settings, listofprojects, listoftasks, taskdetails, tasktimelogdetails, globaltimelog, globaltimelogdetails };
@@ -18,7 +21,7 @@ namespace ProcessDashboard.Droid
         private ListOfProjects ListOfProjectFragment;
         private TaskDetails TaskDetailFragment;
         private TaskTimeLogDetail TaskTimeLogDetailFragment;
-        private ListOfTasks ListOfTasksFragment;
+        private ListProjectTasks ListOfTasksFragment;
 
         private Fragment CurrentFragment;
 
@@ -28,6 +31,30 @@ namespace ProcessDashboard.Droid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
+            //var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            //SetSupportActionBar(toolbar);
+            //ActionBar.Title = "Process Dashboard";
+
+            var fragments = new Fragment[]
+          {
+            HomeFragment, ListOfProjectFragment, GlobalTimeLogFragment
+          };
+
+
+            var titles = CharSequence.ArrayFromStringArray(new[]
+                {
+                    "Home","Projects","Time Log"
+                });
+
+
+            var viewPager = FindViewById<Android.Support.V4.View.ViewPager>(Resource.Id.viewpager);
+            viewPager.Adapter = new TabsFragmentPagerAdapter(SupportFragmentManager, fragments, titles);
+
+            // Give the TabLayout the ViewPager
+            var tabLayout = FindViewById<TabLayout>(Resource.Id.sliding_tabs);
+            tabLayout.SetupWithViewPager(viewPager);
+
+
             LoginFragment = new Login();
             HomeFragment = new Home();
             SettingsFragment = new Settings();
@@ -36,15 +63,15 @@ namespace ProcessDashboard.Droid
             ListOfProjectFragment = new ListOfProjects();
             TaskDetailFragment = new TaskDetails();
             TaskTimeLogDetailFragment = new TaskTimeLogDetail();
-            ListOfTasksFragment = new ListOfTasks();
+            ListOfTasksFragment = new ListProjectTasks();
 
 
             // if logged in
-            CurrentFragment = HomeFragment;
-            // else 
             //CurrentFragment = HomeFragment;
+            // else 
+            CurrentFragment = LoginFragment;
 
-            FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
+            FragmentTransaction fragmentTx = this.SupportFragmentManager.BeginTransaction();
             // The fragment will have the ID of Resource.Id.fragment_container.
             fragmentTx.Replace(Resource.Id.fragmentContainer, CurrentFragment);
             // Commit the transaction.
@@ -59,7 +86,7 @@ namespace ProcessDashboard.Droid
             {
                 return;
             }
-            FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
+            FragmentTransaction fragmentTx = this.SupportFragmentManager.BeginTransaction();
             // The fragment will have the ID of Resource.Id.fragment_container.
             fragmentTx.Replace(Resource.Id.fragmentContainer, fragment);
             // Commit the transaction.
@@ -71,9 +98,9 @@ namespace ProcessDashboard.Droid
         public override void OnBackPressed()
         {
 
-            if (FragmentManager.BackStackEntryCount > 0)
+            if (SupportFragmentManager.BackStackEntryCount > 0)
             {
-                FragmentManager.PopBackStack();
+                SupportFragmentManager.PopBackStack();
                 //CurrentFragment = mStackFragments.Pop();
             }
             else
@@ -114,7 +141,7 @@ namespace ProcessDashboard.Droid
                     ShowFragment(LoginFragment);
                     break;
                 case fragmentTypes.settings:
-                    ShowFragment(SettingsFragment);
+                    //ShowFragment(SettingsFragment);
                     break;
                 case fragmentTypes.listoftasks:
                     ShowFragment(ListOfTasksFragment);
@@ -138,6 +165,36 @@ namespace ProcessDashboard.Droid
             }
         }
 
+    }
+
+    public class TabsFragmentPagerAdapter : FragmentPagerAdapter
+    {
+        private readonly Fragment[] fragments;
+
+        private readonly ICharSequence[] titles;
+
+        public TabsFragmentPagerAdapter(FragmentManager fm, Fragment[] fragments, ICharSequence[] titles) : base(fm)
+        {
+            this.fragments = fragments;
+            this.titles = titles;
+        }
+        public override int Count
+        {
+            get
+            {
+                return fragments.Length;
+            }
+        }
+
+        public override Fragment GetItem(int position)
+        {
+            return fragments[position];
+        }
+
+        public override ICharSequence GetPageTitleFormatted(int position)
+        {
+            return titles[position];
+        }
     }
 }
 

@@ -1,7 +1,9 @@
 
-using Android.App;
+using Android.Support.V4.App;
 using Android.OS;
 using Android.Views;
+using Android.Widget;
+
 
 namespace ProcessDashboard.Droid.Fragments
 {
@@ -17,7 +19,11 @@ namespace ProcessDashboard.Droid.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
+           // View v = inflater.Inflate(Resource.Layout.GlobalTimeLog, container, false);
+            
+            //var listView = v.FindViewById<ExpandableListView>(Resource.Id.myExpandableListview);
+            //listView.SetAdapter(new ExpandableDataAdapter(this, Data.SampleData()));
+
 
             return base.OnCreateView(inflater, container, savedInstanceState);
         }

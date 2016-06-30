@@ -2,7 +2,7 @@ using System;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using Android.App;
+using Android.Support.V4.App;
 
 namespace ProcessDashboard.Droid.Fragments
 {
