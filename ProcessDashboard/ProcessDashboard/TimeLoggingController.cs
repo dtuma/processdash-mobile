@@ -7,7 +7,6 @@ using UIKit;
 #endregion
 namespace ProcessDashboard
 {
-
 	// delegate used for state changes of Process Dashboard.
 	// use this delegate to trigger UI updates
 	public delegate void StateChangedEventHandler(object sender, StateChangedEventArgs e);

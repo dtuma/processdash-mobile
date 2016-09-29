@@ -19,7 +19,7 @@ namespace ProcessDashboard
 		#if __ANDROID__
 	    private Context _context;
 
-	    public void SetContext(Context context)
+	    public static void SetContext(Context context)
 	    {
 	        _context = context;
 	    }
@@ -173,6 +173,7 @@ namespace ProcessDashboard
 					return accounts[0].Properties["DataToken"];
 				}
 				return null;
+
 				#else
 				Account account = (Account)AccountStore.Create(_context).FindAccountsForService(AppName).ElementAtOrDefault(0);
 				return account?.Properties["DataSet"];

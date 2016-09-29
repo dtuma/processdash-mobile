@@ -11,26 +11,25 @@ namespace ProcessDashboard
 		TimeLogStopped		// runnaway timer
 	}
 
-	public class StateChangedEventArgs : EventArgs
-	{
-		private Enum _newState;
-		private string _message;
+    public class StateChangedEventArgs : EventArgs
+    {
+        private Enum _newState;
+        private string _message;
 
-		public StateChangedEventArgs(Enum newState, string message)
-		{
-			_newState = newState;
-			_message = message;
-		}
+        public StateChangedEventArgs(Enum newState, string message)
+        {
+            _newState = newState;
+            _message = message;
+        }
 
-		public Enum NewState
-		{
-			get { return _newState; }
-		}
+        public Enum NewState
+        {
+            get { return _newState; }
+        }
 
-		public string Message
-		{
-			get { return _message; }
-		}
-	}
+        public string Message
+        {
+            get { return _message; }
+        }
+    }
 }
-
